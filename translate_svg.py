@@ -12,7 +12,7 @@ IGNORED_CHARACTERS = ['-',
                     ]
 
 # Create empty set for terms that don't have a translation
-# TODO Add values to this set then create a log file (text file) with all of the terms that are in the SVGs but do not have a translation
+# TODO Add values to this set then create a log file (text file) with all of the English terms that are in the SVGs but do not have a translation
 no_translation = set()
 
 # Create empty dictionary
