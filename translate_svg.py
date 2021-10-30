@@ -12,6 +12,7 @@ IGNORED_CHARACTERS = ['-',
                     ]
 
 # Create empty set for terms that don't have a translation
+# TODO Add values to this set then create a log file (text file) with all of the terms that are in the SVGs but do not have a translation
 no_translation = set()
 
 # Create empty dictionary
@@ -47,6 +48,7 @@ for file in os.listdir('.'):
             child.text = translated_text
         
         # Create new SVG file name
+        # TODO keep the file name the same, but write the SVGs to a new folder
         f_name = file.split('.')
         f_name = f_name[0] + '_new.' + f_name[1]
 
