@@ -23,13 +23,16 @@ class Translate:
         self.csv = csv                  # Take the csv file's name
         self.log = './RU/logs/log.txt'  # The log file that displays terms that don't have a translation
 
+    def __repr__(self) -> str:
+        return 'This is a script that translates the text inside of SVG files and saves as new files.'
+
     def eng_to_foreign(self):
         # Open the csv file and populate the dictionary
         with open(file=self.csv, mode='r', newline='', encoding='utf-8-sig') as csvfile:
             my_reader = csv.reader(csvfile, delimiter=',')
 
             for row in my_reader:
-                if row[0].strip() != '':                            # Exclude the rows with only spaces or no value in them
+                if row[0].strip() != '':                                 # Exclude the rows with only spaces or no value in them
                     self.the_dict.setdefault(row[0].strip(), row[1].strip()) 
 
     def create_svgs(self):
